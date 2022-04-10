@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bntu.fitr.povt.controller.RootController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="7.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Group fx:id="analogueClock" layoutX="135.0" layoutY="146.0">
+               <children>
+                  <Circle fx:id="face" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: radial-gradient(radius 180%, burlywood, derive(burlywood, -30%), derive(burlywood, 30%)); -fx-effect: dropshadow(three-pass-box, grey, 10, 0, 4, 4);" />
+                  <Group fx:id="ticks" />
+                  <Line fx:id="hourHand" endY="-50.0" strokeLineCap="ROUND" strokeWidth="4.0" />
+                  <Line fx:id="minuteHand" endY="-75.0" strokeLineCap="ROUND" strokeWidth="3.0" />
+                  <Line fx:id="secondHand" endY="-88.0" startY="15.0" stroke="#da1313" strokeLineJoin="ROUND" strokeWidth="2.0" />
+                  <Circle fx:id="spindle" fill="#0a1825" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Group>
+         </children></AnchorPane>
+      <Button fx:id="changeTimeButton" focusTraversable="false" layoutX="472.0" layoutY="119.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="190.0" text="CHANGE TIME" />
+      <Button fx:id="changeDateButton" focusTraversable="false" layoutX="472.0" layoutY="190.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="190.0" text="CHANGE DATE" />
+      <Button fx:id="changeTimeZoneButton" focusTraversable="false" layoutX="472.0" layoutY="308.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="190.0" text="CHANGE TIME ZONE" />
+      <Label fx:id="timeField" layoutX="303.0" layoutY="135.0" prefHeight="33.0" prefWidth="159.0" text="Label" />
+      <Label fx:id="dateField" layoutX="303.0" layoutY="209.0" prefHeight="44.0" prefWidth="159.0" text="Label" wrapText="true" />
+      <Label fx:id="timeZoneField" layoutX="126.0" layoutY="325.0" prefHeight="33.0" prefWidth="332.0" />
+      <Label layoutX="315.0" layoutY="26.0" prefHeight="67.0" prefWidth="347.0" text="Date and time">
+         <font>
+            <Font name="Footlight MT Light" size="47.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeZoneLabel" layoutX="126.0" layoutY="302.0" prefHeight="33.0" prefWidth="159.0" text="Time Zone:" />
+      <Label fx:id="dateLabel" layoutX="303.0" layoutY="184.0" prefHeight="33.0" prefWidth="159.0" text="Date:" />
+      <Label fx:id="timeLabel" layoutX="303.0" layoutY="113.0" prefHeight="33.0" prefWidth="159.0" text="Time:" />
+   </children>
+</AnchorPane>
